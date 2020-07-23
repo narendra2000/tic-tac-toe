@@ -46,7 +46,7 @@ window.addEventListener("load",()=>{
     document.querySelector(".human2").innerHTML=player2;
 
 
-    let currentPlayer = "x";
+    let currentPlayer = "X";
     let gameStatus = "GameOn";
     var boxes = document.getElementsByClassName("boxes");
     
@@ -82,15 +82,15 @@ window.addEventListener("load",()=>{
 
         if (boxes[i].innerHTML.trim() == "" && gameStatus == "GameOn") {
           boxes[i].innerHTML = currentPlayer;
-          currentPlayer = currentPlayer == "x" ? "o" : "x";
+          currentPlayer = currentPlayer == "X" ? "O" : "X";
           curr_name= curr_name== u[3].textContent ?u[4].textContent:u[3].textContent;
           document.getElementById("player").innerHTML = curr_name;
-          if(boxes[i].innerHTML.trim()==="x")
+          if(boxes[i].innerHTML.trim()==="X")
             audio1.play();
 
-          else if(boxes[i].innerHTML.trim()==="o")
+          else if(boxes[i].innerHTML.trim()==="O")
             audio2.play();
-          if(boxes[i].innerHTML.trim()==="x"||boxes[i].innerHTML.trim()==="o")
+          if(boxes[i].innerHTML.trim()==="x"||boxes[i].innerHTML.trim()==="O")
           {
             boxes[i].style.cursor="not-allowed";
           }

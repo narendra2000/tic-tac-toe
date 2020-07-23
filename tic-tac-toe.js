@@ -90,7 +90,7 @@ window.addEventListener("load",()=>{
 
           else if(boxes[i].innerHTML.trim()==="O")
             audio2.play();
-          if(boxes[i].innerHTML.trim()==="x"||boxes[i].innerHTML.trim()==="O")
+          if(boxes[i].innerHTML.trim()==="X"||boxes[i].innerHTML.trim()==="O")
           {
             boxes[i].style.cursor="not-allowed";
           }
@@ -181,7 +181,7 @@ window.addEventListener("load",()=>{
       document.querySelector("#player").innerHTML=player1;
 
       document.querySelector("#pop").style.display="block";
-      currentPlayer = "x";
+      currentPlayer = "X";
       document.querySelector("#message").classList.add("hide");
       document.getElementById("draw").classList.add("hide");
 

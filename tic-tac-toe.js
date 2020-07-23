@@ -154,7 +154,14 @@ window.addEventListener("load",()=>{
           boxes[8].innerHTML.trim()!= ""
           )
         {
-          document.getElementById("draw").classList.remove("hide");
+          // document.getElementById("draw").classList.remove("hide");
+          document.querySelector(".text").innerHTML="Game draw! ";
+           document.querySelector(".endgame").style.display="block";
+           document.querySelector(".playagain").addEventListener("click", function() {
+           newgame();
+            audio2.play();
+            curr_name=player1;
+            });
           // document.querySelector("#pop").style.display="none";
           audio.play();
           gameStatus = "Game Over";
@@ -167,6 +174,7 @@ window.addEventListener("load",()=>{
     }
     function newgame()
     {
+       document.querySelector(".endgame").style.display="none";
       for (let i = 0; i < boxes.length; i++) {
         boxes[i].innerHTML = "";
         boxes[i].style.background = "#131313";
@@ -211,14 +219,21 @@ function showWinner(x, y, z)
     var h=document.querySelector(".Sgirl");
     h.classList.add("big");
     h.classList.remove("new");
+    document.querySelector(".text").innerHTML=player1+" Wins!!";
   }
   else
   {
     const h=document.querySelector(".Srobot");
     h.classList.add("big");
     h.classList.remove("new");
+    document.querySelector(".text").innerHTML=player1+" Wins!!";
   }
-  document.querySelector("#message").classList.remove("hide");
+  document.querySelector(".endgame").style.display="block";
+  document.querySelector(".playagain").addEventListener("click", function() {
+      newgame();
+      audio2.play();
+      curr_name=player1;
+    });
   gameStatus = "Game Over";
 
 }

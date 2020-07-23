@@ -156,12 +156,12 @@ window.addEventListener("load",()=>{
         {
           // document.getElementById("draw").classList.remove("hide");
           document.querySelector(".text").innerHTML="Game draw! ";
-           document.querySelector(".endgame").style.display="block";
-           document.querySelector(".playagain").addEventListener("click", function() {
-           newgame();
-            audio2.play();
-            curr_name=player1;
-            });
+          document.querySelector(".endgame").style.display="block";
+  document.querySelector(".playagain").addEventListener("click", function() {
+      newgame();
+      audio2.play();
+      curr_name=player1;
+    });
           // document.querySelector("#pop").style.display="none";
           audio.play();
           gameStatus = "Game Over";
@@ -226,7 +226,7 @@ function showWinner(x, y, z)
     const h=document.querySelector(".Srobot");
     h.classList.add("big");
     h.classList.remove("new");
-    document.querySelector(".text").innerHTML=player1+" Wins!!";
+    document.querySelector(".text").innerHTML=player2+" Wins!!";
   }
   document.querySelector(".endgame").style.display="block";
   document.querySelector(".playagain").addEventListener("click", function() {
